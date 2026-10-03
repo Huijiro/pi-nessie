@@ -1,0 +1,33 @@
+{
+  "name": "pi-nessie",
+  "description": "PI extension exposing the Nessie context library (search, read, write, edit, list) as agent tools via the nessie CLI.",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package"
+  ],
+  "scripts": {
+    "check": "biome check && tsc --noEmit",
+    "format": "biome check --write",
+    "lint": "biome check"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.6",
+    "@earendil-works/pi-ai": "^0.99.1",
+    "@earendil-works/pi-coding-agent": "^0.99.1",
+    "typebox": "1.3.27",
+    "typescript": "^5.9.0"
+  }
+}
